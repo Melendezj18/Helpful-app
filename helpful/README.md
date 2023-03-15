@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# Helpful-app-frontend
+## A solo project using the Django Rest Framework and React to create a full stack application.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Helpful is a web app designed for users to find all their handyman and cleaning needs in one place, as well as make appointments for handy services.  Users can choose from a variety of services and make appointments for the services they need.  The app is designed to be a one stop shop for all your handyman needs.
 
-## Available Scripts
+---
+## Technologies Used
 
-In the project directory, you can run:
+![Technologies Used](https://skillicons.dev/icons?i=django,react,js,html,css)
 
-### `npm start`
+| Code       |          |
+| ---------- | -------- |
+| React      | Django   |
+| JavaScript | Cors     |
+| HTML5      | Bitio    |
+|            | CSS3     |
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### View the deployed page here:
 
-### `npm test`
+[View Helpful](https://trello.com/c/uohUrI8S/19-wireframe)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<table>
+<tr>
+<td>
+  Upon loading the page, you are prompted to sign in or sign up for the service.  Once registered and signed in, you will view the main page where you can choose a service and make an appointment.
+</td>
+</tr>
+</table>
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Planning Docs:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Trello Board:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[View Trello Board](https://trello.com/c/uohUrI8S/19-wireframe)
+<img width="500px" src='readme_img/Helpful trello'>
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Future Goals:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Version 2:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+-As a user i want to see available cleaners
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+-As a user I want to choose my cleaner
 
-## Learn More
+-As a user I would like to request the same cleaner every time
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+-As a User I want to leave specific cleaning instructions
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+-As a user I want a more through cleaning option
 
-### Code Splitting
+#### Version 3:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+-As a user I want to be able to set reoccurring services
 
-### Analyzing the Bundle Size
+-As a user i want to see service progress updates
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+-As a user i would like to find other services such as repair, furniture assembly, home improvement , etc
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
