@@ -10,11 +10,13 @@ export default function AuthPage({ user, setUser }) {
     const handleCloseSignupModal = () => setShowSignupModal(false)
     const handleShowSignupModal = () => setShowSignupModal(true)
 
+
+
     return (
         <div className="AuthPage">
-            <h1>Helpful Services</h1>
+            <h1 className="Landing Title">Helpful Services</h1>
             <LoginForm setUser={setUser} />
-            <Button variant="primary" onClick={handleShowSignupModal}>
+            <Button className="SignUpButton"variant="primary" onClick={handleShowSignupModal}>
             Sign up
             </Button>
             <SignUpModal show={showSignupModal} handleClose={handleCloseSignupModal} setUser={setUser} />

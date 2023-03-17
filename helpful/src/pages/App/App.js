@@ -22,23 +22,25 @@ export default function App() {
   useEffect(() => {
     setUserName(getUserInfo("userName"))
     setUserId(getUserInfo("userId"))
-  })
+  },[])
 
   return (
     <main className='App'>
-      {user ?
+      {user ?(
         <>
           <NavBar user={user} setUser={setUser} />
           <Routes>
             <Route path='/' element={<MainPage user={user} setUser={setUser} />} />
-            <Route path='/cleaning' element={<CleaningPage user={user} setUser={setUser} />} />
+            <Route path='/main' element={<MainPage user={user} setUser={setUser} />} />
+
+            <Route path='/cleaning' element={<CleaningPage user={user} setUser={setUser} userId={userId} />} />
             <Route path='/scheduledservices' element={<ScheduledServices user={user} setUser={setUser} userId={userId} />} />
             <Route path='/underconstruction' element={<UnderConstructionPage user={user} setUser={setUser} />} />
-            <Route path='/homes' element={<Homes user={user} setUser={setUser} />} />
+            <Route path='/homes' element={<Homes user={user} setUser={setUser} userId={userId} userName={userName}/>} />
           </Routes>
         </>
-        :
-        <AuthPage setUser={setUser} />
+       ) :
+        (<AuthPage setUser={setUser} user={user}/>)
       }
 
     </main>

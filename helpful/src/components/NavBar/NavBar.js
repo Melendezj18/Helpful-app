@@ -1,7 +1,7 @@
 import React from 'react'
 import './NavBar.css'
 import { Link } from 'react-router-dom'
-import logo from '../../assets/helpful-low-resolution-color-logo.png'
+import logo from '../../assets/logo-transparent.png'
 import * as userService from '../../utilities/users-service'
 
 export default function NavBar({ user, setUser }) {

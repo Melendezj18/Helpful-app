@@ -1,12 +1,12 @@
-import React, { useState } from 'react'
-import { Modal, Button, Form } from 'react-bootstrap'
+import { Button, Modal, Form } from "react-bootstrap"
 import * as housesAPI from '../../utilities/houses-api'
+import { useState, useEffect } from "react"
 
-export default function HouseModal({ show, handleClose, onHousesUpdated, userId }) {
+export default function UpdateHouseModal({ show, handleClose, onHousesUpdated, userId, house }) {
     const [state, setState] = useState({
-        bedroom: 0,
-        bathroom: 0,
-        error: ''
+        bedroom: house ? house.bedroom : 0,
+        bathroom: house ? house.bathroom : 0,
+        error: '',
     })
 
     function handleChange(e) {
@@ -18,22 +18,22 @@ export default function HouseModal({ show, handleClose, onHousesUpdated, userId 
 
     async function handleSubmit(e) {
         e.preventDefault()
+        console.log("House object:", house)
         try {
-            await housesAPI.createHouse({ ...state, owner: userId })
+            await housesAPI.updateHouse(house.id, { ...state, owner: userId })
             handleClose()
             onHousesUpdated()
         } catch {
             setState({
-                error: 'Create House Failed - Try Again',
+                error: 'Update House Failed - Try Again',
             })
         }
     }
 
-
-    return (
+    return house ? (
         <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton>
-                <Modal.Title>Create a New House</Modal.Title>
+                <Modal.Title>Update House</Modal.Title>
             </Modal.Header>
 
             <Modal.Body>
@@ -63,16 +63,10 @@ export default function HouseModal({ show, handleClose, onHousesUpdated, userId 
                     </Form.Group>
 
                     <Button variant="primary" type="submit">
-                        Create
+                        Update House
                     </Button>
                 </Form>
             </Modal.Body>
-
-            <Modal.Footer>
-                <Button variant="secondary" onClick={handleClose}>
-                    Close
-                </Button>
-            </Modal.Footer>
         </Modal>
-    )
+    ) : null
 }

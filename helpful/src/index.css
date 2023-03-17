@@ -5,8 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(48, 110, 190);
-  background-image: url(./assets/helpful-low-resolution-logo-color-on-transparent-background.png);
+  background: url(./assets/helpful-low-resolution-logo-color-on-transparent-background.png) no-repeat center center fixed;
+  background-color: rgb(28, 81, 151);
 }
 
 code {

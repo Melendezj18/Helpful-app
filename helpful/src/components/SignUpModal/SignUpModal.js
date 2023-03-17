@@ -28,7 +28,7 @@ export default class SignUpModal extends Component {
         }
         try {
             await signUp(this.state)
-            this.props.handleSignUpOrLogin()
+            this.props.handleClose()
         } catch {
             this.setState({
                 error: "Sign Up Failed - Try Again",

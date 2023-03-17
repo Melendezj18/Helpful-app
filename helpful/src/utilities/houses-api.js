@@ -7,11 +7,20 @@ export async function getAll() {
 }
 
 export async function createHouse(house) {
-    return sendRequest(`${BASE_URL}`, 'POST', house)
+    console.log(house)
+    const res = await sendRequest(`${BASE_URL}`, 'POST', house)
+    console.log(house)
+    if (res.status === 201) {
+        return res.json()
+    } else {
+        throw new Error('Creating a house failed')
+    }
 }
 
-export async function updateHouse(house) {
-    return sendRequest(`${BASE_URL}${house.id}`, 'PATCH', house)
+export async function updateHouse(houseid,house) {
+    console.log(house)
+    console.log(houseid)
+    return sendRequest(`${BASE_URL}${houseid}/`, 'PATCH', house)
 }
 
 export async function deleteHouse(house) {
