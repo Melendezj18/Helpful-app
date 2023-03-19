@@ -1,6 +1,7 @@
 import sendRequest from "./users-api";
 
-const BASE_URL = 'http://127.0.0.1:8000/helpful_app/houses/'
+// const BASE_URL = 'http://127.0.0.1:8000/helpful_app/houses/'
+const BASE_URL ='https://helpful-server.onrender.com/helpful_app/houses/'
 
 export async function getAll() {
     return sendRequest(BASE_URL)

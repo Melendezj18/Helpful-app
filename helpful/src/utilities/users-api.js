@@ -1,6 +1,7 @@
 import { getToken } from "./users-service"
 
-const BASE_URL = 'http://127.0.0.1:8000/helpful_app/' || 'http://localhost:8000/helpful_app/'
+const BASE_URL ='https://helpful-server.onrender.com/helpful_app/'
+// const BASE_URL = 'http://127.0.0.1:8000/helpful_app/' || 'http://localhost:8000/helpful_app/'
 
 
 export async function signUp(userData) {
